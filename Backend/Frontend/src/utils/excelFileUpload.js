@@ -21,7 +21,7 @@ const excelFileUpload=async(file,subject,body)=>{
     formData.append('subject',subject);
     formData.append('body',body);
     try{
-        const res=await axios.post("http://localhost:4002/upload",formData,
+        const res=await axios.post("https://aues.onrender.com/",formData,
             {headers:{
                 'Content-Type':"multipart/form-data"
             }}
