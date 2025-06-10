@@ -8,6 +8,7 @@ import nodemailer from "nodemailer"
 import dotenv from "dotenv";
 
 dotenv.config();
+const PORT=process.env.PORT;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -73,8 +74,8 @@ if(process.env.NODE_ENV=="production"){
     });
 }
 
-app.listen(4002,()=>{
-    console.log("Server is running fine at port 4002");
+app.listen(PORT,()=>{
+    console.log("Server is running fine at",PORT);
 })
 
 
